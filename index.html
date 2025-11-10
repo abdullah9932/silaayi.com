@@ -3,37 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Silaayi.com</title>
+    <title>Silaayi - Premium Tote Bags</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #764ba2;
         }
         .container {
-            text-align: center;
-            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
         }
-        h1 {
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 3rem;
+        }
+        .product-info {
+            padding: 1.5rem;
+        }
+        .product-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .product-info p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
             margin-bottom: 1rem;
         }
-        p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Silaayi.com</h1>
-        <p>Your website is coming soon!</p>
-        <p>🚀 Powered by GitHub Pages & Cloudflare</p>
+    <header>
+        <h1>👜 Silaayi</h1>
+        <p>Premium Handcrafted Tote Bags</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container" id="products">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Our Collection</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">Discover our beautiful range of eco-friendly tote bags</p>
+        
+        <div class="products">
+            <div class="product-card">
+                <div class="product-image">🌿</div>
+                <div class="product-info">
+                    <h3>Classic Canvas Tote</h3>
+                    <p>Durable 100% organic cotton canvas with reinforced handles. Perfect for everyday use.</p>
+                    <div class="price">$24.99</div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">🌸</div>
+                <div class="product-info">
+                    <h3>Floral Garden Tote</h3>
+                    <p>Beautiful botanical prints on premium canvas. Adds a touch of nature to your style.</p>
+                    <div class="price">$29.99</div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">✨</div>
+                <div class="product-info">
+                    <h3>Minimalist Tote</h3>
+                    <p>Clean design with premium finish. Sophisticated and timeless for any occasion.</p>
+                    <div class="price">$27.99</div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">🌊</div>
+                <div class="product-info">
+                    <h3>Ocean Blue Tote</h3>
+                    <p>Inspired by the sea with vibrant blue tones. Spacious and water-resistant.</p>
+                    <div class="price">$32.99</div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">🍂</div>
+                <div class="product-info">
+                    <h3>Autumn Leaves Tote</h3>
+                    <p>Warm earth tones perfect for fall. Made from recycled materials.</p>
+                    <div class="price">$26.99</div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">🌟</div>
+                <div class="product-info">
+                    <h3>Starry Night Tote</h3>
+                    <p>Dark canvas with golden star pattern. Elegant and mysterious design.</p>
+                    <div class="price">$31.99</div>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    <footer>
+        <p>&copy; 2025 Silaayi.com - All Rights Reserved</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Sustainable Fashion | Eco-Friendly Materials</p>
+    </footer>
 </body>
 </html>
